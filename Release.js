@@ -33,6 +33,8 @@ function generateResourceListing (options) {
 var decorator = module.exports = function (options) {
   var release = this;
 
+  release.enable('trust proxy');
+
   // Activate Swagger resource listing.
   release.get('/api-docs', function (request, response, next) {
     response.set('X-Powered-By', 'Baucis');
